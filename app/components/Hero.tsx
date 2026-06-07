@@ -38,10 +38,9 @@ export function Hero() {
             <div className="absolute bottom-0 left-0 right-0 z-10 flex flex-col items-center gap-2.5 p-3 pb-3.5 lg:bottom-4 lg:left-4 lg:right-4 lg:items-stretch lg:p-0">
               <a
                 href="#catalogo"
-                className="inline-flex items-center gap-1.5 rounded-full border border-cream/70 bg-cream/85 px-4 py-2 text-sm font-medium text-forest shadow-sm backdrop-blur-md active:scale-[0.98] lg:hidden"
+                className="inline-flex items-center gap-1.5 rounded-full border border-cream/80 bg-cream/90 px-4 py-2 text-sm font-semibold text-forest shadow-md backdrop-blur-md ring-2 ring-cream/50 active:scale-[0.98] lg:hidden"
               >
-                Ver catálogo
-                <ArrowRight className="h-3.5 w-3.5 opacity-70" />
+                Ver catálogo →
               </a>
               <div className="flex justify-center gap-2 lg:hidden">
                 <div className="rounded-full border border-cream/50 bg-cream/75 px-3 py-1.5 backdrop-blur-md">

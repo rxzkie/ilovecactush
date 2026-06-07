@@ -11,6 +11,7 @@ import { Faq } from "./components/Faq";
 import { CTA } from "./components/CTA";
 import { Footer } from "./components/Footer";
 import { MobileBottomBar } from "./components/MobileBottomBar";
+import { MobileBuyPrompt } from "./components/MobileBuyPrompt";
 import { JsonLd } from "./components/JsonLd";
 
 export const metadata: Metadata = {
@@ -43,6 +44,7 @@ export default function Home() {
         <CTA />
       </main>
       <Footer />
+      <MobileBuyPrompt />
       <MobileBottomBar />
     </>
   );
