@@ -2,7 +2,7 @@ export const faqs = [
   {
     question: "¿Dónde comprar suculentas en Chile?",
     answer:
-      "En ilovecactusch puedes comprar suculentas online desde Rancagua con envío a todo Chile. Revisa nuestro catálogo, elige tu planta y contáctanos por WhatsApp para coordinar tu pedido.",
+      "En ilovecactusch puedes comprar suculentas online desde Rancagua con envío a todo Chile. Revisa nuestro catálogo, elige tu planta y contáctanos por Instagram para coordinar tu pedido.",
   },
   {
     question: "¿Venden cactus y suculentas con envío a todo Chile?",
@@ -12,7 +12,7 @@ export const faqs = [
   {
     question: "¿Cómo compro suculentas en ilovecactusch?",
     answer:
-      "Entra al catálogo de la web, selecciona la planta que te guste y presiona el botón de WhatsApp. Te respondemos con disponibilidad, precio y opciones de envío.",
+      "Entra al catálogo de la web, selecciona la planta que te guste y escríbenos por Instagram. Te respondemos con disponibilidad, precio y opciones de envío.",
   },
   {
     question: "¿Cuánto cuestan las suculentas y cactus?",
@@ -22,7 +22,7 @@ export const faqs = [
   {
     question: "¿Tienen tienda de cactus en Rancagua?",
     answer:
-      "Somos un emprendimiento basado en Rancagua, Región de O'Higgins. Puedes ver el catálogo online y coordinar retiro o envío según tu comuna.",
+      "Somos un emprendimiento basado en Rancagua, Región de O'Higgins. Puedes ver el catálogo online y coordinar retiro o envío por Instagram según tu comuna.",
   },
   {
     question: "¿Qué tipos de plantas venden?",

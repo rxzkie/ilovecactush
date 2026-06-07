@@ -3,8 +3,8 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { ArrowRight, Sparkles } from "lucide-react";
-import { whatsappLink } from "@/lib/whatsapp";
-import { WhatsAppIcon } from "./WhatsAppIcon";
+import { instagramUrl } from "@/lib/contact";
+import { InstagramIcon } from "./InstagramIcon";
 
 export function Hero() {
   return (
@@ -102,20 +102,18 @@ export function Hero() {
               <ArrowRight className="h-5 w-5" />
             </a>
             <a
-              href={whatsappLink(
-                "Hola! Quiero comprar plantas. ¿Me ayudas?"
-              )}
+              href={instagramUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex min-h-14 w-full items-center justify-center gap-2 rounded-2xl bg-[#25D366] px-6 text-base font-semibold text-white active:scale-[0.98] sm:rounded-full"
+              className="flex min-h-14 w-full items-center justify-center gap-2 rounded-2xl bg-forest px-6 text-base font-semibold text-cream active:scale-[0.98] sm:rounded-full"
             >
-              <WhatsAppIcon className="h-5 w-5" />
-              WhatsApp
+              <InstagramIcon className="h-5 w-5" />
+              Instagram
             </a>
           </div>
 
           <a
-            href="https://www.instagram.com/ilovecactusch/"
+            href={instagramUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="mt-6 inline-flex items-center gap-2 text-base font-medium text-forest/70 active:text-forest"

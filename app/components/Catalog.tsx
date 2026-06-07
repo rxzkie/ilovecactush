@@ -3,8 +3,8 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { catalog, formatPrice } from "@/lib/products";
-import { whatsappLink } from "@/lib/whatsapp";
-import { WhatsAppIcon } from "./WhatsAppIcon";
+import { instagramUrl } from "@/lib/contact";
+import { InstagramIcon } from "./InstagramIcon";
 
 export function Catalog() {
   return (
@@ -23,7 +23,7 @@ export function Catalog() {
             Compra suculentas y cactus
           </h2>
           <p className="mx-auto mt-4 max-w-md text-base text-forest/70 sm:mt-5 sm:max-w-2xl sm:text-lg">
-            Toca WhatsApp en cualquier planta para comprar. Precios en pesos
+            Toca Instagram en cualquier planta para comprar. Precios en pesos
             chilenos con envío a todo Chile.
           </p>
         </motion.div>
@@ -56,16 +56,14 @@ export function Catalog() {
                   {formatPrice(product.price)}
                 </p>
                 <a
-                  href={whatsappLink(
-                    `Hola! Me interesa ${product.name} (${formatPrice(product.price)}). ¿Está disponible?`
-                  )}
+                  href={instagramUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-3 inline-flex h-9 items-center justify-center gap-1.5 self-start rounded-full bg-[#3dba6a]/90 px-4 text-xs font-medium text-white shadow-sm active:scale-[0.98] sm:mt-5 sm:h-12 sm:self-stretch sm:px-5 sm:text-sm sm:font-semibold"
+                  className="mt-3 inline-flex h-9 items-center justify-center gap-1.5 self-start rounded-full bg-forest px-4 text-xs font-medium text-cream shadow-sm active:scale-[0.98] sm:mt-5 sm:h-12 sm:self-stretch sm:px-5 sm:text-sm sm:font-semibold"
                 >
-                  <WhatsAppIcon className="h-3.5 w-3.5 shrink-0 sm:h-5 sm:w-5" />
-                  <span className="sm:hidden">WhatsApp</span>
-                  <span className="hidden sm:inline">Comprar por WhatsApp</span>
+                  <InstagramIcon className="h-3.5 w-3.5 shrink-0 sm:h-5 sm:w-5" />
+                  <span className="sm:hidden">Instagram</span>
+                  <span className="hidden sm:inline">Comprar por Instagram</span>
                 </a>
               </div>
             </motion.article>

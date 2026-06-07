@@ -2,9 +2,8 @@
 
 import { motion } from "framer-motion";
 import { Truck } from "lucide-react";
-import { whatsappLink } from "@/lib/whatsapp";
+import { instagramUrl } from "@/lib/contact";
 import { InstagramIcon } from "./InstagramIcon";
-import { WhatsAppIcon } from "./WhatsAppIcon";
 
 export function CTA() {
   return (
@@ -24,7 +23,8 @@ export function CTA() {
               ¿Lista tu próxima planta?
             </h2>
             <p className="mt-4 text-base leading-relaxed text-forest/70 sm:mt-5 sm:text-lg">
-              Escríbenos para consultar stock, precios y envío a tu comuna.
+              Escríbenos por Instagram para consultar stock, precios y envío a
+              tu comuna.
             </p>
 
             <div className="mt-6 flex flex-wrap justify-center gap-2 text-sm text-forest/60">
@@ -39,18 +39,16 @@ export function CTA() {
 
             <div className="mt-8 flex flex-col items-center gap-2.5 sm:items-stretch sm:gap-3">
               <a
-                href={whatsappLink(
-                  "Hola! Quiero comprar plantas. ¿Me ayudas?"
-                )}
+                href={instagramUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex h-10 items-center justify-center gap-2 rounded-full bg-[#3dba6a]/90 px-5 text-sm font-medium text-white shadow-sm active:scale-[0.98] sm:h-14 sm:w-full sm:text-base sm:font-semibold"
+                className="inline-flex h-10 items-center justify-center gap-2 rounded-full bg-forest px-5 text-sm font-medium text-cream shadow-sm active:scale-[0.98] sm:h-14 sm:w-full sm:text-base sm:font-semibold"
               >
-                <WhatsAppIcon className="h-4 w-4 sm:h-5 sm:w-5" />
-                Escribir por WhatsApp
+                <InstagramIcon className="h-4 w-4 sm:h-5 sm:w-5" />
+                Escribir por Instagram
               </a>
               <a
-                href="https://www.instagram.com/ilovecactusch/"
+                href={instagramUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex h-10 items-center justify-center gap-2 rounded-full border border-forest/15 bg-cream/80 px-5 text-sm font-medium text-forest active:scale-[0.98] sm:h-14 sm:w-full sm:border-2 sm:text-base sm:font-semibold"

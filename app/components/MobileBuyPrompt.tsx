@@ -4,8 +4,8 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { Sparkles, X } from "lucide-react";
-import { whatsappLink } from "@/lib/whatsapp";
-import { WhatsAppIcon } from "./WhatsAppIcon";
+import { instagramUrl } from "@/lib/contact";
+import { InstagramIcon } from "./InstagramIcon";
 
 const STORAGE_KEY = "ilovecactus-buy-prompt";
 
@@ -91,27 +91,25 @@ export function MobileBuyPrompt() {
                 ¿Lista para llevarte una suculenta?
               </h2>
               <p className="mt-1 text-sm text-forest/65">
-                Escríbenos ahora y te respondemos al instante con precios y
-                stock disponible.
+                Escríbenos por Instagram y te respondemos con precios y stock
+                disponible.
               </p>
 
               <a
-                href={whatsappLink(
-                  "Hola! Acabo de entrar a la web y quiero comprar una planta. ¿Qué tienen disponible?"
-                )}
+                href={instagramUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={close}
-                className="mt-5 flex h-14 w-full animate-pulse items-center justify-center gap-2 rounded-2xl bg-[#25D366] text-base font-bold text-white shadow-lg shadow-[#25D366]/40 active:scale-[0.98]"
+                className="mt-5 flex h-14 w-full animate-pulse items-center justify-center gap-2 rounded-2xl bg-forest text-base font-bold text-cream shadow-lg shadow-forest/40 active:scale-[0.98]"
               >
-                <WhatsAppIcon className="h-5 w-5" />
-                Comprar ahora por WhatsApp
+                <InstagramIcon className="h-5 w-5" />
+                Comprar por Instagram
               </a>
 
               <a
                 href="#catalogo"
                 onClick={close}
-                className="mt-3 flex h-12 w-full items-center justify-center rounded-2xl bg-forest text-sm font-semibold text-cream active:scale-[0.98]"
+                className="mt-3 flex h-12 w-full items-center justify-center rounded-2xl border-2 border-forest/20 bg-cream text-sm font-semibold text-forest active:scale-[0.98]"
               >
                 Ver catálogo completo
               </a>
