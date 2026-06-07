@@ -1,62 +1,62 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { MessageCircle, Truck } from "lucide-react";
+import { Truck } from "lucide-react";
+import { whatsappLink } from "@/lib/whatsapp";
 import { InstagramIcon } from "./InstagramIcon";
+import { WhatsAppIcon } from "./WhatsAppIcon";
 
 export function CTA() {
   return (
-    <section id="contacto" className="py-24">
-      <div className="mx-auto max-w-6xl px-6">
+    <section id="contacto" className="py-14 sm:py-24">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <motion.div
-          initial={{ opacity: 0, y: 24 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="relative overflow-hidden rounded-[2.5rem] bg-gradient-to-br from-sage/30 via-cream to-blush/40 p-10 sm:p-16"
+          className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-sage/30 via-cream to-blush/40 p-6 sm:rounded-[2.5rem] sm:p-16"
         >
-          <div className="pointer-events-none absolute -right-20 -top-20 h-60 w-60 rounded-full bg-sage/20 blur-3xl" />
-          <div className="pointer-events-none absolute -bottom-16 -left-16 h-48 w-48 rounded-full bg-terracotta/20 blur-3xl" />
-
-          <div className="relative mx-auto max-w-2xl text-center">
-            <p className="text-sm font-semibold uppercase tracking-widest text-forest/60">
+          <div className="relative text-center">
+            <p className="text-xs font-semibold uppercase tracking-widest text-forest/60 sm:text-sm">
               Contacto
             </p>
-            <h2 className="mt-3 font-[family-name:var(--font-cormorant)] text-4xl font-semibold text-forest sm:text-5xl">
+            <h2 className="mt-2 font-[family-name:var(--font-cormorant)] text-3xl font-semibold text-forest sm:mt-3 sm:text-5xl">
               ¿Lista tu próxima planta?
             </h2>
-            <p className="mt-5 text-lg leading-relaxed text-forest/70">
-              Escríbenos por Instagram para consultar disponibilidad, precios y
-              coordinar tu envío a cualquier parte de Chile.
+            <p className="mt-4 text-base leading-relaxed text-forest/70 sm:mt-5 sm:text-lg">
+              Escríbenos para consultar stock, precios y envío a tu comuna.
             </p>
 
-            <div className="mt-8 flex flex-wrap items-center justify-center gap-4 text-sm text-forest/60">
+            <div className="mt-6 flex flex-wrap justify-center gap-2 text-sm text-forest/60">
               <span className="inline-flex items-center gap-2 rounded-full bg-cream/80 px-4 py-2">
                 <Truck className="h-4 w-4 text-sage" />
-                Envíos a todo Chile
+                Envío nacional
               </span>
               <span className="inline-flex items-center gap-2 rounded-full bg-cream/80 px-4 py-2">
                 📍 Rancagua
               </span>
             </div>
 
-            <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
+            <div className="mt-8 flex flex-col items-center gap-2.5 sm:items-stretch sm:gap-3">
               <a
-                href="https://www.instagram.com/ilovecactusch/"
+                href={whatsappLink(
+                  "Hola! Quiero comprar plantas. ¿Me ayudas?"
+                )}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group inline-flex items-center justify-center gap-3 rounded-full bg-forest px-8 py-4 text-base font-semibold text-cream shadow-lg shadow-forest/20 transition-all hover:bg-forest/90 hover:shadow-xl"
+                className="inline-flex h-10 items-center justify-center gap-2 rounded-full bg-[#3dba6a]/90 px-5 text-sm font-medium text-white shadow-sm active:scale-[0.98] sm:h-14 sm:w-full sm:text-base sm:font-semibold"
               >
-                <InstagramIcon className="h-5 w-5" />
-                @ilovecactusch
+                <WhatsAppIcon className="h-4 w-4 sm:h-5 sm:w-5" />
+                Escribir por WhatsApp
               </a>
               <a
                 href="https://www.instagram.com/ilovecactusch/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-3 rounded-full border-2 border-forest/20 bg-cream/80 px-8 py-4 text-base font-semibold text-forest transition-all hover:border-sage hover:bg-sage/10"
+                className="inline-flex h-10 items-center justify-center gap-2 rounded-full border border-forest/15 bg-cream/80 px-5 text-sm font-medium text-forest active:scale-[0.98] sm:h-14 sm:w-full sm:border-2 sm:text-base sm:font-semibold"
               >
-                <MessageCircle className="h-5 w-5" />
-                Enviar mensaje
+                <InstagramIcon className="h-4 w-4 sm:h-5 sm:w-5" />
+                @ilovecactusch
               </a>
             </div>
           </div>

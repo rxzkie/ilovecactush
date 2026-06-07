@@ -8,51 +8,51 @@ import { WhatsAppIcon } from "./WhatsAppIcon";
 
 export function Catalog() {
   return (
-    <section id="catalogo" className="py-24">
-      <div className="mx-auto max-w-6xl px-6">
+    <section id="catalogo" className="py-14 sm:py-24">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mx-auto max-w-2xl text-center"
+          className="text-center"
         >
-          <p className="text-sm font-semibold uppercase tracking-widest text-sage">
+          <p className="text-xs font-semibold uppercase tracking-widest text-sage sm:text-sm">
             Catálogo
           </p>
-          <h2 className="mt-3 font-[family-name:var(--font-cormorant)] text-4xl font-semibold text-forest sm:text-5xl">
-            Catálogo para comprar suculentas y cactus
+          <h2 className="mt-2 font-[family-name:var(--font-cormorant)] text-3xl font-semibold text-forest sm:mt-3 sm:text-5xl">
+            Compra suculentas y cactus
           </h2>
-          <p className="mt-5 text-lg text-forest/70">
-            Precios en pesos chilenos. Elige tu planta y compra por WhatsApp con
-            envío a todo Chile.
+          <p className="mx-auto mt-4 max-w-md text-base text-forest/70 sm:mt-5 sm:max-w-2xl sm:text-lg">
+            Toca WhatsApp en cualquier planta para comprar. Precios en pesos
+            chilenos con envío a todo Chile.
           </p>
         </motion.div>
 
-        <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-8 flex flex-col gap-4 sm:mt-14 sm:grid sm:grid-cols-2 sm:gap-6 lg:grid-cols-3">
           {catalog.map((product, i) => (
             <motion.article
               key={product.id}
-              initial={{ opacity: 0, y: 24 }}
+              initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.45, delay: i * 0.06 }}
-              className="group flex flex-col overflow-hidden rounded-3xl border border-sand/80 bg-cream transition-all hover:border-sage/40 hover:shadow-xl hover:shadow-sage/10"
+              transition={{ duration: 0.35, delay: i * 0.04 }}
+              className="flex overflow-hidden rounded-2xl border border-sand/80 bg-cream sm:flex-col sm:rounded-3xl"
             >
-              <div className="relative aspect-square overflow-hidden bg-sand/30">
+              <div className="relative h-32 w-32 shrink-0 bg-sand/30 sm:h-auto sm:w-full sm:aspect-square">
                 <Image
                   src={product.image}
                   alt={product.name}
                   fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
-                  sizes="(max-width: 768px) 100vw, 33vw"
+                  className="object-cover"
+                  sizes="(max-width: 640px) 128px, 33vw"
                 />
               </div>
 
-              <div className="flex flex-1 flex-col p-5">
-                <h3 className="font-[family-name:var(--font-cormorant)] text-2xl font-semibold text-forest">
+              <div className="flex min-w-0 flex-1 flex-col justify-center p-4 sm:p-5">
+                <h3 className="font-[family-name:var(--font-cormorant)] text-lg font-semibold leading-tight text-forest sm:text-2xl">
                   {product.name}
                 </h3>
-                <p className="mt-2 text-2xl font-bold text-terracotta">
+                <p className="mt-1 text-xl font-bold text-terracotta sm:mt-2 sm:text-2xl">
                   {formatPrice(product.price)}
                 </p>
                 <a
@@ -61,10 +61,11 @@ export function Catalog() {
                   )}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-5 inline-flex items-center justify-center gap-2 rounded-full bg-[#25D366] px-5 py-3 text-sm font-semibold text-white transition-all hover:bg-[#1fb855] hover:shadow-lg hover:shadow-[#25D366]/30"
+                  className="mt-3 inline-flex h-9 items-center justify-center gap-1.5 self-start rounded-full bg-[#3dba6a]/90 px-4 text-xs font-medium text-white shadow-sm active:scale-[0.98] sm:mt-5 sm:h-12 sm:self-stretch sm:px-5 sm:text-sm sm:font-semibold"
                 >
-                  <WhatsAppIcon className="h-5 w-5" />
-                  WhatsApp
+                  <WhatsAppIcon className="h-3.5 w-3.5 shrink-0 sm:h-5 sm:w-5" />
+                  <span className="sm:hidden">WhatsApp</span>
+                  <span className="hidden sm:inline">Comprar por WhatsApp</span>
                 </a>
               </div>
             </motion.article>

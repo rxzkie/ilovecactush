@@ -9,6 +9,8 @@
   --cream: #faf8f4;
   --sand: #e8e0d4;
   --blush: #e8c4b8;
+  --header-height: 4.5rem;
+  --mobile-bar-height: 3.75rem;
 }
 
 @theme inline {
@@ -26,15 +28,30 @@
 
 html {
   scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  scroll-padding-top: calc(var(--header-height) + 0.5rem);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-jakarta), system-ui, sans-serif;
+  -webkit-tap-highlight-color: transparent;
+  overflow-x: hidden;
+}
+
+@media (max-width: 767px) {
+  body {
+    padding-bottom: var(--mobile-bar-height);
+  }
 }
 
 ::selection {
   background: #7c9a7c40;
   color: var(--forest);
+}
+
+.touch-target {
+  min-height: 3rem;
+  min-width: 3rem;
 }
